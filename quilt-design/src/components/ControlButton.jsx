@@ -9,3 +9,4 @@ class ControlButton extends Component {
     );
   }
 }
+export default ControlButton;

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './App.css';
 import Header from './components/Header';
 import DimensionInput from './components/DimensionInput'
+import ControlButton from './components/ControlButton'
 
 class App extends Component {
   constructor(props) {
@@ -97,6 +98,34 @@ class App extends Component {
         <div className="build-footer">
           or build as you go ...
         </div>
+              <div className = 'controls'>
+                <div>
+                  <ControlButton label="+ Row" onClick={this.handleAddRow} />
+                  <ControlButton label="- Row" onClick={this.handleRemoveRow} />
+                </div>
+                <div>
+                  <ControlButton label="+ Col" onClick={this.handleAddCol} />
+                  <ControlButton label="- Col" onClick={this.handleRemoveCol} />
+                </div>
+              </div>
+
+          <div className="export">
+            <button
+              onClick={this.handleExport}
+              style={{
+                padding: '15px 40px',
+                fontSize: '18px',
+                backgroundColor: 'white',
+                color: '#8b7ab8',
+                border: '3px solid #8b7ab8',
+                borderRadius: '25px',
+                cursor: 'pointer',
+                fontWeight: 'bold'
+              }}
+            >
+              Save/Export Your Design to Bring it to Life Later!
+            </button>
+          </div>
       </div>
     );
   }
