@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .logo-fluid{
@@ -11,4 +12,12 @@
     /* clamp(min, preferred, max) */
     /* Reads as: "Be 25vw, but never smaller than 200px or larger than 500px" */
     width: clamp(110px, 10vw, 190px);
+}
+.heading{
+  color: white;
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 400;
+  text-align: center;
+  padding: 50px;
+  font-size: clamp(16px, 2.5vw, 32px);
 }
