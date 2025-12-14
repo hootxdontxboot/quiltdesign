@@ -65,12 +65,35 @@ class App extends Component {
 
   handleAddRow = () => {
     const { rows, cols, tiles} = this.state;
+    if (rows < 10){
+      const newTiles = [...tiles];
+      for (let i = 0; i < cols; i++) {
+      newTiles.push('#8b7ab8');
+    }
+    this.setState({
+    rows: rows + 1,
+    tiles: newTiles
+    });
+    }
   }
 
 
   handleAddCol = () => {
     const { rows, cols, tiles} = this.state;
+    if (cols < 10){
+      const newtiles = [];
+      for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+          newTiles.push(tiles[i * cols + j]);
+        }
+        newTiles.push('#8b7ab8');
+      }
+      this.setState({
+        cols: cols + 1,
+        tiles: newTiles
+      });
   }
+}
 
   render() {
     const { rows, cols, tiles } = this.state;
