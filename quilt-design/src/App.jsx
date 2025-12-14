@@ -36,20 +36,20 @@ class App extends Component {
     const { rows, cols, tiles} = this.state;
     if (cols > 1){
       const newTiles = [];
-      for (let i = 0; i < rows ; i++);
+      for (let i = 0; i < rows ; i++)
       {
-        for (let j = 0; j < cols; j++);
+        for (let j = 0; j < cols; j++)
         {
-          newTiles.push(tiles[i * cols + j])
+          newTiles.push(tiles[i * cols + j]);
         }
       }
 
       this.setState({
         cols: cols - 1,
-        tiles: newTiles
-      })
+        tiles: newTiles,
+      });
     }
-  }
+  };
 
   handleRemoveRow = () => {
     const { cols, rows, tiles } = this.state;
@@ -81,7 +81,7 @@ class App extends Component {
   handleAddCol = () => {
     const { rows, cols, tiles} = this.state;
     if (cols < 10){
-      const newtiles = [];
+      const newTiles = [];
       for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
           newTiles.push(tiles[i * cols + j]);
