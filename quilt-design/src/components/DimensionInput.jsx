@@ -4,7 +4,7 @@ import React, { Component } from "react";
 class DimensionInput extends Component {
 
     handleChange = (e) => {
-        const value = parseInte(e.target.value) || 0;
+        const value = parseInt(e.target.value) || 0;
         this.props.onChange(value);
     }
   render() {

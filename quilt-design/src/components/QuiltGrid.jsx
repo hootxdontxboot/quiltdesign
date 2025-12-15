@@ -1,6 +1,8 @@
 // The actual grid containerimport React, { Component } from "react";
 import QuiltSquare from './QuiltSquare';
-import './QuiltGrid.css';
+import React, { Component } from "react";
+
+
 
 class QuiltGrid extends Component {
   render() {

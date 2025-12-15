@@ -1,6 +1,5 @@
 //These are the reusable buttons that will update grid size
 import React, { Component } from "react";
-import './ControlButton.css';
 
 class ControlButton extends Component {
   render() {

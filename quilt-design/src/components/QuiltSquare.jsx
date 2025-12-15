@@ -1,8 +1,9 @@
 //Individual Square
+import React, { Component } from "react";
 
 class QuiltSquare extends Component{
     render () {
-        const {color, size, onclick } = this.props;
+        const {color, size, onClick } = this.props;
         return ( 
             <div
             onClick={onClick}
