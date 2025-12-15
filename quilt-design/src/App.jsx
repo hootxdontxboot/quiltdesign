@@ -21,15 +21,15 @@ class App extends Component {
   handleColsChange = (cols) => {
     this.setState({
       cols,
-      tiles: this.initializeTiles(rows, this.state.cols)
-    })
+      tiles: this.initializeTiles(this.state.rows, cols) 
+    });
   }
 
   handleRowsChange = (rows) => {
     this.setState({
       rows,
-      tiles: this.initializeTiles(this.state.rows, cols)
-    })
+      tiles: this.initializeTiles(rows, this.state.cols) 
+    });
   }
 
   handleRemoveCol = () => {
